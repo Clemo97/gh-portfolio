@@ -1,12 +1,17 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+
 
 import { AppComponent } from './app.component';
 import { PersonalInfoComponent } from './personal-info/personal-info.component';
 import { PanelComponent } from './panel/panel.component';
 import { RepositoriesComponent } from './repositories/repositories.component';
 import { OrganizationsComponent } from './organizations/organizations.component';
+import { MyFormComponent } from './my-form/my-form.component';
+import { ReactiveFormsModule } from '@angular/forms';
+
 
 
 @NgModule({
@@ -15,11 +20,14 @@ import { OrganizationsComponent } from './organizations/organizations.component'
     PersonalInfoComponent,
     PanelComponent,
     RepositoriesComponent,
-    OrganizationsComponent
+    OrganizationsComponent,
+    MyFormComponent
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

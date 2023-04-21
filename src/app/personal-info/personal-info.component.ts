@@ -18,5 +18,5 @@ export class PersonalInfoComponent implements OnInit {
   ngOnInit(): void {
     this.user$ = this.githubService.getUser();
   }
-  
+
 }

@@ -1,0 +1,17 @@
+<!-- <div class="container">
+  <h1>My Form</h1>
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="username">Username:</label>
+      <input type="text" class="form-control" id="username" formControlName="username" />
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div> -->
+
+<form>
+  <input type="text" [(ngModel)]="username" name="username">
+  <button type="button" (click)="sendData()">Submit</button>
+</form>
+
+

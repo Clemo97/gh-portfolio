@@ -10,6 +10,7 @@ import { Organization } from './organization';
   providedIn: 'root'
 })
 export class GithubService {
+  [x: string]: any;
 
   private userUrl: string = '';
 
@@ -18,8 +19,11 @@ export class GithubService {
   }
 
   getUser(): Observable<User> {
-    return this.http.get<User>(this.userUrl);
+    const userUrl = `${environment.apiUrl}/users/${environment.username}`;
+    return this.http.get<User>(userUrl);
   }
+
+
 
   getRepos(): Observable<Repository[]> {
     return this.http.get<Repository[]>(this.userUrl +

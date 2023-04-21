@@ -1,4 +1,5 @@
 export interface User {
+login: any;
   avatar_url: string;
   name: string;
   blog: string;
